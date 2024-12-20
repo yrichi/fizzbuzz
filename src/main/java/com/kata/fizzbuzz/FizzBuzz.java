@@ -8,35 +8,27 @@ public class FizzBuzz {
 
     public String eval(int min, int max) {
         String result = "";
-        if (min == 0) {
-            result += String.valueOf(min);
-        } else if (min % 3 == 0 && min % 5 == 0) {
+        result = getString(min, result);
+        if (min < max) {
+            result = getString(max, result);
+        }
+
+
+        return result;
+    }
+
+    private static String getString(int max, String result) {
+        if (max == 0) {
+            result += String.valueOf(max);
+        } else if (max % 3 == 0 && max % 5 == 0) {
             result += FIZZBUZZ;
-        } else if (min % 3 == 0) {
+        } else if (max % 3 == 0) {
             result += FIZZ;
-        } else if (min % 5 == 0) {
+        } else if (max % 5 == 0) {
             result += BUZZ;
         } else {
-            result += String.valueOf(min);
+            result += String.valueOf(max);
         }
-
-
-        if (min < max) {
-
-            if (max == 0) {
-                result += String.valueOf(max);
-            } else if (max % 3 == 0 && max % 5 == 0) {
-                result += FIZZBUZZ;
-            } else if (max % 3 == 0) {
-                result += FIZZ;
-            } else if (max % 5 == 0) {
-                result += BUZZ;
-            } else {
-                result += String.valueOf(max);
-            }
-        }
-
-
         return result;
     }
 }
