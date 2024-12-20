@@ -10,19 +10,8 @@ import static com.kata.fizzbuzz.FizzBuzz.FIZZ;
 
 public class FizzBuzzTest {
 
-
-@Test
-    public void should_return_1_when_we_have_1_in_input(){
-    // GIVEN
-    FizzBuzz fizzbuzz = new FizzBuzz();
-    // WHEN
-    String result = fizzbuzz.eval(1);
-    // THEN
-    Assertions.assertThat(result).isEqualTo("1");
-}
-
     @ParameterizedTest
-    @CsvSource(value = "1,2,4,7,11")
+    @CsvSource({"1", "2"})
     public void should_return_number_as_string_when_not_divisible_by_3_or_5(int number){
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
@@ -32,43 +21,26 @@ public class FizzBuzzTest {
         Assertions.assertThat(result).isEqualTo(String.valueOf(number));
     }
 
-    @Test
-    public void should_return_fizz_when_we_have_3_in_input(){
-        // GIVEN
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        // WHEN
-        String result = fizzbuzz.eval(3);
-        // THEN
-        Assertions.assertThat(result).isEqualTo(FIZZ);
-    }
 
-    @Test
-    public void should_return_buzz_when_we_have_5_in_input(){
+    @ParameterizedTest
+    @CsvSource({"3", "6", "9", "12"})
+    public void should_return_fizz_when_divisible_by_3_and_not_by_5(int input){
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(5);
-        // THEN
-        Assertions.assertThat(result).isEqualTo(BUZZ);
-    }
-
-    @Test
-    public void should_return_fizz_when_we_have_6_in_input(){
-        // GIVEN
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        // WHEN
-        String result = fizzbuzz.eval(6);
+        String result = fizzbuzz.eval(input);
         // THEN
         Assertions.assertThat(result).isEqualTo(FIZZ);
     }
 
 
-    @Test
-    public void should_return_buzz_when_we_have_10_in_input(){
+    @ParameterizedTest
+    @CsvSource({"5", "10"})
+    public void should_return_buzz_when_divisible_by_5_and_not_by_3(int input){
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(10);
+        String result = fizzbuzz.eval(input);
         // THEN
         Assertions.assertThat(result).isEqualTo(BUZZ);
     }
