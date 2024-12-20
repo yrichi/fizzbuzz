@@ -1,20 +1,34 @@
-# Leap Year Kata
+# FizzBuzz Kata
 
 ## Description
-Le **Leap Year Kata** est un exercice de codage conçu pour pratiquer le **Développement Dirigé par les Tests (TDD)**. L'objectif est d'implémenter un programme qui détermine si une année donnée est une année bissextile ou non, selon des règles bien définies.
+Le **FizzBuzz Kata** est un exercice de codage simple conçu pour pratiquer le **Développement Dirigé par les Tests (TDD)**. L'objectif est d'implémenter un programme qui produit des nombres ou des mots spécifiques selon des règles de divisibilité.
 
 ## Règles
-1. Une année est bissextile si elle est divisible par 4.
-2. Une année n'est **pas** bissextile si elle est divisible par 100 mais **pas** par 400.
-3. Toutes les autres années ne sont pas bissextiles.
+1. Afficher "Fizz" pour les nombres divisibles par 3.
+2. Afficher "Buzz" pour les nombres divisibles par 5.
+3. Afficher "FizzBuzz" pour les nombres divisibles à la fois par 3 et par 5.
+4. Afficher le nombre lui-même si aucune des conditions ci-dessus n'est remplie.
 
-### Exemple de résultats
-Pour les années suivantes :
+### Exemple de sortie
+Pour les nombres de 1 à 15 :
 
-- 1997 : Non bissextile.
-- 1996 : Bissextile.
-- 1900 : Non bissextile.
-- 2000 : Bissextile.
+```
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+```
 
 ---
 
@@ -28,6 +42,7 @@ Pour les années suivantes :
 ## Comment utiliser
 
 ### Pré-requis
+- **Java Development Kit (JDK)** installé (Java 11 ou version supérieure recommandée).
 - Un outil de build comme **Maven** ou **Gradle** (facultatif).
 - **JUnit 5** pour les tests.
 
@@ -49,4 +64,3 @@ Suivez le cycle **Rouge-Vert-Refactor** du TDD :
 2. **Vert** : Écrivez le code minimal pour faire passer le test.
 3. **Refactor** : Améliorez le code tout en vous assurant que tous les tests restent verts.
 
----
