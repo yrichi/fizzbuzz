@@ -3,6 +3,8 @@ package com.kata.fizzbuzz;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static com.kata.fizzbuzz.FizzBuzz.FIZZ;
+
 public class FizzBuzzTest {
 
 
@@ -11,7 +13,7 @@ public class FizzBuzzTest {
     // GIVEN
     FizzBuzz fizzbuzz = new FizzBuzz();
     // WHEN
-    String result = fizzbuzz.get(1);
+    String result = fizzbuzz.eval(1);
     // THEN
     Assertions.assertThat(result).isEqualTo("1");
 }
@@ -21,7 +23,7 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.get(2);
+        String result = fizzbuzz.eval(2);
         // THEN
         Assertions.assertThat(result).isEqualTo("2");
     }
@@ -31,9 +33,9 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.get(3);
+        String result = fizzbuzz.eval(3);
         // THEN
-        Assertions.assertThat(result).isEqualTo("Fizz");
+        Assertions.assertThat(result).isEqualTo(FIZZ);
     }
 
 

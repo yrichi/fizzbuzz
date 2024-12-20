@@ -1,7 +1,10 @@
 package com.kata.fizzbuzz;
 
 public class FizzBuzz {
-    public String get(int number) {
+
+    public static final String FIZZ = "Fizz";
+
+    public String eval(int number) {
         if (number == 1 ){
             return String.valueOf(number);
         }
@@ -9,7 +12,7 @@ public class FizzBuzz {
             return String.valueOf(number);
         }
         if (number == 3){
-            return "Fizz";
+            return FIZZ;
         }
         return "";
     }
