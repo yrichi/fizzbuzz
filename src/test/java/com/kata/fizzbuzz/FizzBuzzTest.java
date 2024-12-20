@@ -26,6 +26,16 @@ public class FizzBuzzTest {
         Assertions.assertThat(result).isEqualTo("2");
     }
 
+    @Test
+    public void should_return_fizz_when_we_have_3_in_input(){
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.get(3);
+        // THEN
+        Assertions.assertThat(result).isEqualTo("Fizz");
+    }
+
 
 
 }

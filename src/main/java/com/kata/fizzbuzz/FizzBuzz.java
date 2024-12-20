@@ -8,6 +8,9 @@ public class FizzBuzz {
         if (number == 2 ){
             return String.valueOf(number);
         }
+        if (number == 3){
+            return "Fizz";
+        }
         return "";
     }
 }
