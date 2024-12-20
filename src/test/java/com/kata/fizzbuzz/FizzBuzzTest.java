@@ -57,4 +57,15 @@ public class FizzBuzzTest {
     }
 
 
+    @Test
+    public void should_return_0_as_string_when_input_is_0(){
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(0);
+        // THEN
+        Assertions.assertThat(result).isEqualTo(String.valueOf(0));
+    }
+
+
 }
