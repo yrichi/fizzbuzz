@@ -11,8 +11,8 @@ import static com.kata.fizzbuzz.FizzBuzz.FIZZ;
 public class FizzBuzzTest {
 
     @ParameterizedTest
-    @CsvSource({"1", "2","4", "7", "8", "11", "13", "14", "16", "17", "19"})
-    public void should_return_number_as_string_when_not_divisible_by_3_or_5(int number){
+    @CsvSource({"1", "2", "4", "7", "8", "11", "13", "14", "16", "17", "19"})
+    public void should_return_number_as_string_when_not_divisible_by_3_or_5(int number) {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
@@ -23,8 +23,8 @@ public class FizzBuzzTest {
 
 
     @ParameterizedTest
-    @CsvSource({"3", "6", "9", "12"})
-    public void should_return_fizz_when_divisible_by_3_and_not_by_5(int input){
+    @CsvSource({"-3", "3", "6", "9", "12"})
+    public void should_return_fizz_when_divisible_by_3_and_not_by_5(int input) {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
@@ -35,8 +35,8 @@ public class FizzBuzzTest {
 
 
     @ParameterizedTest
-    @CsvSource({"5", "10"})
-    public void should_return_buzz_when_divisible_by_5_and_not_by_3(int input){
+    @CsvSource({"-5","5", "10"})
+    public void should_return_buzz_when_divisible_by_5_and_not_by_3(int input) {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
@@ -46,19 +46,19 @@ public class FizzBuzzTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"15", "30"})
-    public void should_return_buzz_when_divisible_by_5_and_by_3(int input){
+    @CsvSource({"-15","15", "30"})
+    public void should_return_buzz_when_divisible_by_5_and_by_3(int input) {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
         String result = fizzbuzz.eval(input);
         // THEN
-        Assertions.assertThat(result).isEqualTo(FIZZ+BUZZ);
+        Assertions.assertThat(result).isEqualTo(FIZZ + BUZZ);
     }
 
 
     @Test
-    public void should_return_0_as_string_when_input_is_0(){
+    public void should_return_0_as_string_when_input_is_0() {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
