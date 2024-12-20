@@ -43,7 +43,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_fizz_when_we_have_5_in_input(){
+    public void should_return_buzz_when_we_have_5_in_input(){
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
@@ -52,6 +52,15 @@ public class FizzBuzzTest {
         Assertions.assertThat(result).isEqualTo(BUZZ);
     }
 
+    @Test
+    public void should_return_fizz_when_we_have_6_in_input(){
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(6);
+        // THEN
+        Assertions.assertThat(result).isEqualTo(FIZZ);
+    }
 
 
 

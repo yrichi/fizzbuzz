@@ -6,17 +6,17 @@ public class FizzBuzz {
     public static final String BUZZ = "Buzz";
 
     public String eval(int number) {
-        if (number == 1 ){
+        if (number == 1) {
             return String.valueOf(number);
         }
-        if (number == 2 ){
+        if (number == 2) {
             return String.valueOf(number);
         }
-        if (number == 3){
+        if (number == 3 || number == 6) {
             return FIZZ;
         }
 
-        if (number == 5){
+        if (number == 5) {
             return BUZZ;
         }
         return "";
