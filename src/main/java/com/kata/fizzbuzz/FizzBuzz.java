@@ -5,6 +5,9 @@ public class FizzBuzz {
         if (number == 1 ){
             return String.valueOf(number);
         }
+        if (number == 2 ){
+            return String.valueOf(number);
+        }
         return "";
     }
 }
