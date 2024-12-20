@@ -12,7 +12,7 @@ public class FizzBuzz {
         if (number == 2) {
             return String.valueOf(number);
         }
-        if (number == 3 || number == 6) {
+        if (number % 3 == 0 ) {
             return FIZZ;
         }
 
