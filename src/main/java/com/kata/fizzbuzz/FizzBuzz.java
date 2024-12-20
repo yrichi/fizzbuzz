@@ -4,6 +4,7 @@ public class FizzBuzz {
 
     public static final String FIZZ = "Fizz";
     public static final String BUZZ = "Buzz";
+    public static final String FIZZBUZZ = FIZZ+BUZZ;
 
     public String eval(int number) {
 
@@ -12,7 +13,7 @@ public class FizzBuzz {
         }
 
         if (number % 3 == 0 && number % 5 == 0) {
-            return FIZZ + BUZZ;
+            return FIZZBUZZ;
         }
 
         if (number % 3 == 0) {

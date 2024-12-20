@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.kata.fizzbuzz.FizzBuzz.BUZZ;
-import static com.kata.fizzbuzz.FizzBuzz.FIZZ;
+import static com.kata.fizzbuzz.FizzBuzz.*;
 
 public class FizzBuzzTest {
 
@@ -53,7 +52,7 @@ public class FizzBuzzTest {
         // WHEN
         String result = fizzbuzz.eval(input);
         // THEN
-        Assertions.assertThat(result).isEqualTo(FIZZ + BUZZ);
+        Assertions.assertThat(result).isEqualTo(FIZZBUZZ);
     }
 
 
