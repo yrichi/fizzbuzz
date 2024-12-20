@@ -7,14 +7,11 @@ public class FizzBuzz {
     public static final String FIZZBUZZ = FIZZ + BUZZ;
 
     public String eval(int min, int max) {
-        String result = "";
-        result += getString(min);
-        if (min < max) {
-            result += getString(max);
+        StringBuilder result = new StringBuilder();
+        for (int i = min; i <= max; i++) {
+            result.append(getString(i));
         }
-
-
-        return result;
+        return result.toString();
     }
 
     private static String getString(int input) {
