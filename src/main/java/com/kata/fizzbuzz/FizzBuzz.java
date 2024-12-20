@@ -3,6 +3,7 @@ package com.kata.fizzbuzz;
 public class FizzBuzz {
 
     public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
 
     public String eval(int number) {
         if (number == 1 ){
@@ -13,6 +14,10 @@ public class FizzBuzz {
         }
         if (number == 3){
             return FIZZ;
+        }
+
+        if (number == 5){
+            return BUZZ;
         }
         return "";
     }
