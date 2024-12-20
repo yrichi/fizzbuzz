@@ -15,16 +15,16 @@ public class FizzBuzz {
     }
 
     private static String getString(int input) {
-        if (input == 0) {
+        if (input == 0)
             return String.valueOf(input);
-        } else if (input % 3 == 0 && input % 5 == 0) {
+        if (input % 3 == 0 && input % 5 == 0)
             return FIZZBUZZ;
-        } else if (input % 3 == 0) {
+        if (input % 3 == 0)
             return FIZZ;
-        } else if (input % 5 == 0) {
+        if (input % 5 == 0)
             return BUZZ;
-        } else {
-            return String.valueOf(input);
-        }
+
+        return String.valueOf(input);
     }
+
 }
