@@ -15,7 +15,7 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(number);
+        String result = fizzbuzz.eval(number, number);
         // THEN
         Assertions.assertThat(result).isEqualTo(String.valueOf(number));
     }
@@ -27,7 +27,7 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(input);
+        String result = fizzbuzz.eval(input, input);
         // THEN
         Assertions.assertThat(result).isEqualTo(FIZZ);
     }
@@ -39,7 +39,7 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(input);
+        String result = fizzbuzz.eval(input, input);
         // THEN
         Assertions.assertThat(result).isEqualTo(BUZZ);
     }
@@ -50,7 +50,7 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(input);
+        String result = fizzbuzz.eval(input, input);
         // THEN
         Assertions.assertThat(result).isEqualTo(FIZZBUZZ);
     }
@@ -61,10 +61,20 @@ public class FizzBuzzTest {
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
         // WHEN
-        String result = fizzbuzz.eval(0);
+        String result = fizzbuzz.eval(0, 0);
         // THEN
         Assertions.assertThat(result).isEqualTo(String.valueOf(0));
     }
 
+
+    @Test
+    void should_12_when_input_is_1and2() {
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(1,2);
+        // THEN
+        Assertions.assertThat(result).isEqualTo("12");
+    }
 
 }
