@@ -63,5 +63,15 @@ public class FizzBuzzTest {
     }
 
 
+    @Test
+    public void should_return_buzz_when_we_have_10_in_input(){
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(10);
+        // THEN
+        Assertions.assertThat(result).isEqualTo(BUZZ);
+    }
+
 
 }

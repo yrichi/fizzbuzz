@@ -16,7 +16,7 @@ public class FizzBuzz {
             return FIZZ;
         }
 
-        if (number == 5) {
+        if (number % 5 == 0) {
             return BUZZ;
         }
         return "";
