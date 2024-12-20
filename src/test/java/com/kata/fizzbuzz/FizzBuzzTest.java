@@ -77,4 +77,15 @@ public class FizzBuzzTest {
         Assertions.assertThat(result).isEqualTo("12");
     }
 
+    @Test
+    void should_FizzBuzz16_when_input_is_15And16() {
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(15,16);
+        // THEN
+        Assertions.assertThat(result).isEqualTo("FizzBuzz16");
+    }
+
+
 }
