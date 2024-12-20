@@ -11,7 +11,7 @@ import static com.kata.fizzbuzz.FizzBuzz.FIZZ;
 public class FizzBuzzTest {
 
     @ParameterizedTest
-    @CsvSource({"1", "2"})
+    @CsvSource({"1", "2","4", "7", "8", "11", "13", "14", "16", "17", "19"})
     public void should_return_number_as_string_when_not_divisible_by_3_or_5(int number){
         // GIVEN
         FizzBuzz fizzbuzz = new FizzBuzz();
