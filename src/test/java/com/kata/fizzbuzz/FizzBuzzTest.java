@@ -45,5 +45,16 @@ public class FizzBuzzTest {
         Assertions.assertThat(result).isEqualTo(BUZZ);
     }
 
+    @ParameterizedTest
+    @CsvSource({"15", "30"})
+    public void should_return_buzz_when_divisible_by_5_and_by_3(int input){
+        // GIVEN
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        // WHEN
+        String result = fizzbuzz.eval(input);
+        // THEN
+        Assertions.assertThat(result).isEqualTo(FIZZ+BUZZ);
+    }
+
 
 }
